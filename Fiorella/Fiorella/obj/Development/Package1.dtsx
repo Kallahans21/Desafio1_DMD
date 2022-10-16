@@ -1,0 +1,3376 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/24/2022 9:43:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-2J6JSSGM"
+  DTS:CreatorName="LAPTOP-2J6JSSGM\Got2l"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{2629CAA3-48D6-4488-9707-3732D0D1DC74}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Package1"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{44D4B8CE-2B10-4C56-9422-5871302EFE3F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8D2C4595-31B7-4A78-AA2F-3484251E0636}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ejercicio1;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceSan Salvador]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{effc109f-a987-4354-97ad-ca1562cfb5cb}"
+      DTS:ObjectName="SourceSan Salvador">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="22538"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Got2l\OneDrive\Documentos\don bosco\ciclo 3\Datawarehouse y Minería de Datos\desafio 1\Fiorella\SanSalvador_i20191007.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{A1ED1FB8-8CD6-45EC-8AD2-F0EA3BCC3DED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rosas"
+              DTS:DTSID="{2C0E1E6D-E138-4BDF-A663-DB0DBE0FBEFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Claveles"
+              DTS:DTSID="{6143FAEA-9C25-423E-97A6-4B5CB746C510}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Macetas"
+              DTS:DTSID="{0F7C36BA-11E6-4FB1-9528-311127F7398B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tierra"
+              DTS:DTSID="{271974B1-9951-4F61-A0A7-C3C38295E8D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Girasoles"
+              DTS:DTSID="{844529FB-B18C-4157-A662-442A398F293F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hortensia"
+              DTS:DTSID="{B0FC4A85-5134-4B2F-9749-9EAF11CC316C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Globos"
+              DTS:DTSID="{60B78077-5FF2-4A73-96F4-141B8B78F639}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tarjetas"
+              DTS:DTSID="{A7A043D8-9339-4FD6-8980-943EA3D72E3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fOrquÃ­dias"
+              DTS:DTSID="{F5DF695E-E5A6-4458-AC24-331666CC3774}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CarmesÃ­"
+              DTS:DTSID="{E8184A30-D949-4B2D-A361-9F84C890E38B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lirios"
+              DTS:DTSID="{A0F1BFC9-778D-45F0-84A7-005989B22F8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Aurora"
+              DTS:DTSID="{48B6DC23-A8E5-456C-96CF-B9819459F52F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tulipanes"
+              DTS:DTSID="{D289DEDF-05E8-43D1-883F-C47C5BDFEC8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ListÃ³n"
+              DTS:DTSID="{1843C670-28D1-4B93-9E59-D7919C16893C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceSanMiguel]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9CFF9902-677A-451D-89F9-09C4157224CC}"
+      DTS:ObjectName="SourceSanMiguel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="22538"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Got2l\OneDrive\Documentos\don bosco\ciclo 3\Datawarehouse y Minería de Datos\desafio 1\Fiorella\SanMiguel_j20191007.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{54C6BF2F-9B0E-41CF-9CD0-EF086D47F29C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rosas"
+              DTS:DTSID="{99E137DA-F682-4F3D-8389-19C898FF97B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Claveles"
+              DTS:DTSID="{4065676D-8BD9-44F5-AE95-82C3CF482B18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Macetas"
+              DTS:DTSID="{428F230E-5CED-4B30-BF1E-AE6DEC8AB9DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tierra"
+              DTS:DTSID="{8641BE88-81F5-4530-97DD-0778AE8007A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Girasoles"
+              DTS:DTSID="{9A91D71F-51D9-4B81-89CD-FD617D46724D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hortensia"
+              DTS:DTSID="{13204888-24B3-4572-80C7-CD71C6DF05E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Globos"
+              DTS:DTSID="{D75C1224-B262-4B2D-B4B5-F1210D1006F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tarjetas"
+              DTS:DTSID="{FC459109-FDFF-434B-9227-D82FE29C4F5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fOrquÃ­dias"
+              DTS:DTSID="{C82BED41-3CDD-413C-BFC5-28EF27A8A09D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CarmesÃ­"
+              DTS:DTSID="{CD54B7C4-A479-46A4-92A8-B7565052FB3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lirios"
+              DTS:DTSID="{D3154C24-8296-4084-BC09-54AB83A3D415}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Aurora"
+              DTS:DTSID="{4A3FC850-4BD3-4D26-8DA4-EEEBD587B35B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tulipanes"
+              DTS:DTSID="{EACE947E-F8AF-46D4-9ECB-13C18048B4AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ListÃ³n"
+              DTS:DTSID="{0EDCC7B5-20BD-4CD0-92F3-B68D80D74D98}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceSanta Ana]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{02f9ce2b-3574-4bed-b4aa-dc7d1d72acab}"
+      DTS:ObjectName="SourceSanta Ana">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="22538"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Got2l\OneDrive\Documentos\don bosco\ciclo 3\Datawarehouse y Minería de Datos\desafio 1\Fiorella\SantaAna_c20191007.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{A2D0068C-51FC-41AE-83F4-8F183ED9296F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rosas"
+              DTS:DTSID="{A06A23DE-CB31-4C93-8000-5FA765F9E6CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Claveles"
+              DTS:DTSID="{A26226E1-F4FA-409E-802A-54A16B1A6B83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Macetas"
+              DTS:DTSID="{43A318CD-D264-45BB-AE5E-57185A1B6D6A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tierra"
+              DTS:DTSID="{2127F422-203F-4FE1-BBD0-E379982462BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Girasoles"
+              DTS:DTSID="{31A78EFB-90C3-4DD4-93D0-0602AAA85F9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hortensia"
+              DTS:DTSID="{D1D96E13-2AE2-4D28-BDC3-38AD1DC3DD74}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Globos"
+              DTS:DTSID="{85294A57-BF80-4767-973E-A892F14370FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tarjetas"
+              DTS:DTSID="{16484DF1-966F-42F9-B6A2-C83D5BA69566}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fOrquÃ­dias"
+              DTS:DTSID="{D23AA6F3-8F72-420E-936D-0ECF260971E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CarmesÃ­"
+              DTS:DTSID="{F9C56789-B508-4A82-B435-D94BAFAC6F8B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lirios"
+              DTS:DTSID="{568A05EC-94A3-4941-AB86-96F166676B86}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Aurora"
+              DTS:DTSID="{01EBF1F3-8F8E-4532-9E23-E9BEDB0C72E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tulipanes"
+              DTS:DTSID="{7597788C-6172-4E51-85E0-A243F03DD98B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ListÃ³n"
+              DTS:DTSID="{BDA3225F-18A9-4D97-80D0-F67006290385}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{F2E3825D-576A-4B7D-A027-27498AF8BD60}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Derived San Miguel"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived San Miguel"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Derived San Miguel.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derived San Miguel.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Output].Columns[Departamento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Output].Columns[Departamento]"
+                      name="Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"SanMig"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"SanMig"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derived San Miguel.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Derived San Salvador"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived San Salvador"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Derived San Salvador.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derived San Salvador.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Output].Columns[Departamento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Output].Columns[Departamento]"
+                      name="Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"SanSal"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"SanSal"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derived San Salvador.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Derived Santa Ana"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Santa Ana"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Derived Santa Ana.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derived Santa Ana.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Output].Columns[Departamento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Output].Columns[Departamento]"
+                      name="Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"SanAna"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"SanAna"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derived Santa Ana.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Destination - Fiorella"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - Fiorella"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Fiorella]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - Fiorella.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Rosas]"
+                      cachedDataType="ui1"
+                      cachedName="Rosas"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Rosas]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Rosas]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Claveles]"
+                      cachedDataType="ui1"
+                      cachedName="Claveles"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Claveles]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Claveles]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Macetas]"
+                      cachedDataType="ui1"
+                      cachedName="Macetas"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Macetas]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Macetas]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Tierra]"
+                      cachedDataType="ui1"
+                      cachedName="Tierra"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Tierra]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tierra]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Girasoles]"
+                      cachedDataType="ui1"
+                      cachedName="Girasoles"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Girasoles]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Girasoles]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Hortensia]"
+                      cachedDataType="ui1"
+                      cachedName="Hortensia"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Hortensia]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hortensia]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Globos]"
+                      cachedDataType="ui1"
+                      cachedName="Globos"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Globos]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Globos]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Tarjetas]"
+                      cachedDataType="ui1"
+                      cachedName="Tarjetas"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Tarjetas]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tarjetas]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[fOrquÃ­dias]"
+                      cachedDataType="ui1"
+                      cachedName="fOrquÃ­dias"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[fOrquÃ­dias]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[fOrquÃ­dias]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[CarmesÃ­]"
+                      cachedDataType="ui1"
+                      cachedName="CarmesÃ­"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[CarmesÃ­]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[CarmesÃ­]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Lirios]"
+                      cachedDataType="ui1"
+                      cachedName="Lirios"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Lirios]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Lirios]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Aurora]"
+                      cachedDataType="ui1"
+                      cachedName="Aurora"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Aurora]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Aurora]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Tulipanes]"
+                      cachedDataType="ui1"
+                      cachedName="Tulipanes"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Tulipanes]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tulipanes]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[ListÃ³n]"
+                      cachedDataType="ui1"
+                      cachedName="ListÃ³n"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[ListÃ³n]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ListÃ³n]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Departamento"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Departamento]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Departamento]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Rosas]"
+                      dataType="ui1"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Claveles]"
+                      dataType="ui1"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Macetas]"
+                      dataType="ui1"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Tierra]"
+                      dataType="ui1"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Girasoles]"
+                      dataType="ui1"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Hortensia]"
+                      dataType="ui1"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Globos]"
+                      dataType="ui1"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Tarjetas]"
+                      dataType="ui1"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[fOrquÃ­dias]"
+                      dataType="ui1"
+                      name="fOrquÃ­dias" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[CarmesÃ­]"
+                      dataType="ui1"
+                      name="CarmesÃ­" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Lirios]"
+                      dataType="ui1"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Aurora]"
+                      dataType="ui1"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Tulipanes]"
+                      dataType="ui1"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[ListÃ³n]"
+                      dataType="ui1"
+                      name="ListÃ³n" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input].ExternalColumns[Departamento]"
+                      dataType="wstr"
+                      length="6"
+                      name="Departamento" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - Fiorella.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - Fiorella.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - Fiorella.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - Fiorella.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - San Salvador"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="22538"
+              name="Source - San Salvador"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - San Salvador.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceSanMiguel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceSanMiguel]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Rosas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Claveles]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Macetas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tierra]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Girasoles]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Hortensia]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Globos]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tarjetas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[fOrquÃ­dias]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]"
+                      name="fOrquÃ­dias"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[CarmesÃ­]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[CarmesÃ­]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[CarmesÃ­]"
+                      name="CarmesÃ­"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Lirios]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Aurora]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tulipanes]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[ListÃ³n]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[ListÃ³n]"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[ListÃ³n]"
+                      name="ListÃ³n"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Rosas]"
+                      dataType="ui1"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Claveles]"
+                      dataType="ui1"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Macetas]"
+                      dataType="ui1"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Tierra]"
+                      dataType="ui1"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Girasoles]"
+                      dataType="ui1"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Hortensia]"
+                      dataType="ui1"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Globos]"
+                      dataType="ui1"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Tarjetas]"
+                      dataType="ui1"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[fOrquÃ­dias]"
+                      dataType="ui1"
+                      name="fOrquÃ­dias" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[CarmesÃ­]"
+                      dataType="ui1"
+                      name="CarmesÃ­" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Lirios]"
+                      dataType="ui1"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Aurora]"
+                      dataType="ui1"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[Tulipanes]"
+                      dataType="ui1"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].ExternalColumns[ListÃ³n]"
+                      dataType="ui1"
+                      name="ListÃ³n" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - SanMiguel"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="22538"
+              name="Source - SanMiguel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - SanMiguel.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceSanMiguel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceSanMiguel]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Rosas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Claveles]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Macetas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tierra]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Girasoles]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Hortensia]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Globos]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tarjetas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[fOrquÃ­dias]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]"
+                      name="fOrquÃ­dias"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[CarmesÃ­]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[CarmesÃ­]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[CarmesÃ­]"
+                      name="CarmesÃ­"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Lirios]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Aurora]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tulipanes]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[ListÃ³n]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[ListÃ³n]"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[ListÃ³n]"
+                      name="ListÃ³n"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Rosas]"
+                      dataType="ui1"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Claveles]"
+                      dataType="ui1"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Macetas]"
+                      dataType="ui1"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Tierra]"
+                      dataType="ui1"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Girasoles]"
+                      dataType="ui1"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Hortensia]"
+                      dataType="ui1"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Globos]"
+                      dataType="ui1"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Tarjetas]"
+                      dataType="ui1"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[fOrquÃ­dias]"
+                      dataType="ui1"
+                      name="fOrquÃ­dias" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[CarmesÃ­]"
+                      dataType="ui1"
+                      name="CarmesÃ­" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Lirios]"
+                      dataType="ui1"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Aurora]"
+                      dataType="ui1"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[Tulipanes]"
+                      dataType="ui1"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].ExternalColumns[ListÃ³n]"
+                      dataType="ui1"
+                      name="ListÃ³n" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - Santa Ana"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="22538"
+              name="Source - Santa Ana"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - Santa Ana.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceSanta Ana]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceSanta Ana]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Rosas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Claveles]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Macetas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tierra]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Girasoles]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Hortensia]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Globos]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tarjetas]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[fOrquÃ­dias]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]"
+                      name="fOrquÃ­dias"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[CarmesÃ­]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[CarmesÃ­]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[CarmesÃ­]"
+                      name="CarmesÃ­"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Lirios]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Aurora]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tulipanes]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[ListÃ³n]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[ListÃ³n]"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[ListÃ³n]"
+                      name="ListÃ³n"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Rosas]"
+                      dataType="ui1"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Claveles]"
+                      dataType="ui1"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Macetas]"
+                      dataType="ui1"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Tierra]"
+                      dataType="ui1"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Girasoles]"
+                      dataType="ui1"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Hortensia]"
+                      dataType="ui1"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Globos]"
+                      dataType="ui1"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Tarjetas]"
+                      dataType="ui1"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[fOrquÃ­dias]"
+                      dataType="ui1"
+                      name="fOrquÃ­dias" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[CarmesÃ­]"
+                      dataType="ui1"
+                      name="CarmesÃ­" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Lirios]"
+                      dataType="ui1"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Aurora]"
+                      dataType="ui1"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[Tulipanes]"
+                      dataType="ui1"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].ExternalColumns[ListÃ³n]"
+                      dataType="ui1"
+                      name="ListÃ³n" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Rosas]"
+                      cachedDataType="ui1"
+                      cachedName="Rosas"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Claveles]"
+                      cachedDataType="ui1"
+                      cachedName="Claveles"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Macetas]"
+                      cachedDataType="ui1"
+                      cachedName="Macetas"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Tierra]"
+                      cachedDataType="ui1"
+                      cachedName="Tierra"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Girasoles]"
+                      cachedDataType="ui1"
+                      cachedName="Girasoles"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Hortensia]"
+                      cachedDataType="ui1"
+                      cachedName="Hortensia"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Globos]"
+                      cachedDataType="ui1"
+                      cachedName="Globos"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Tarjetas]"
+                      cachedDataType="ui1"
+                      cachedName="Tarjetas"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[fOrquÃ­dias]"
+                      cachedDataType="ui1"
+                      cachedName="fOrquÃ­dias"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[fOrquÃ­dias]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[CarmesÃ­]"
+                      cachedDataType="ui1"
+                      cachedName="CarmesÃ­"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[CarmesÃ­]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[CarmesÃ­]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Lirios]"
+                      cachedDataType="ui1"
+                      cachedName="Lirios"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Aurora]"
+                      cachedDataType="ui1"
+                      cachedName="Aurora"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Tulipanes]"
+                      cachedDataType="ui1"
+                      cachedName="Tulipanes"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[ListÃ³n]"
+                      cachedDataType="ui1"
+                      cachedName="ListÃ³n"
+                      lineageId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output].Columns[ListÃ³n]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ListÃ³n]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Departamento"
+                      lineageId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Output].Columns[Departamento]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Departamento]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Rosas]"
+                      cachedDataType="ui1"
+                      cachedName="Rosas"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Claveles]"
+                      cachedDataType="ui1"
+                      cachedName="Claveles"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Macetas]"
+                      cachedDataType="ui1"
+                      cachedName="Macetas"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Tierra]"
+                      cachedDataType="ui1"
+                      cachedName="Tierra"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Girasoles]"
+                      cachedDataType="ui1"
+                      cachedName="Girasoles"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Hortensia]"
+                      cachedDataType="ui1"
+                      cachedName="Hortensia"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Globos]"
+                      cachedDataType="ui1"
+                      cachedName="Globos"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Tarjetas]"
+                      cachedDataType="ui1"
+                      cachedName="Tarjetas"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[fOrquÃ­dias]"
+                      cachedDataType="ui1"
+                      cachedName="fOrquÃ­dias"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[fOrquÃ­dias]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[CarmesÃ­]"
+                      cachedDataType="ui1"
+                      cachedName="CarmesÃ­"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[CarmesÃ­]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[CarmesÃ­]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Lirios]"
+                      cachedDataType="ui1"
+                      cachedName="Lirios"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Aurora]"
+                      cachedDataType="ui1"
+                      cachedName="Aurora"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Tulipanes]"
+                      cachedDataType="ui1"
+                      cachedName="Tulipanes"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[ListÃ³n]"
+                      cachedDataType="ui1"
+                      cachedName="ListÃ³n"
+                      lineageId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output].Columns[ListÃ³n]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ListÃ³n]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Departamento"
+                      lineageId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Output].Columns[Departamento]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Departamento]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Rosas]"
+                      cachedDataType="ui1"
+                      cachedName="Rosas"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Claveles]"
+                      cachedDataType="ui1"
+                      cachedName="Claveles"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Macetas]"
+                      cachedDataType="ui1"
+                      cachedName="Macetas"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Tierra]"
+                      cachedDataType="ui1"
+                      cachedName="Tierra"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Girasoles]"
+                      cachedDataType="ui1"
+                      cachedName="Girasoles"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Hortensia]"
+                      cachedDataType="ui1"
+                      cachedName="Hortensia"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Globos]"
+                      cachedDataType="ui1"
+                      cachedName="Globos"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Tarjetas]"
+                      cachedDataType="ui1"
+                      cachedName="Tarjetas"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[fOrquÃ­dias]"
+                      cachedDataType="ui1"
+                      cachedName="fOrquÃ­dias"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[fOrquÃ­dias]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[fOrquÃ­dias]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[CarmesÃ­]"
+                      cachedDataType="ui1"
+                      cachedName="CarmesÃ­"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[CarmesÃ­]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[CarmesÃ­]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Lirios]"
+                      cachedDataType="ui1"
+                      cachedName="Lirios"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Aurora]"
+                      cachedDataType="ui1"
+                      cachedName="Aurora"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Tulipanes]"
+                      cachedDataType="ui1"
+                      cachedName="Tulipanes"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[ListÃ³n]"
+                      cachedDataType="ui1"
+                      cachedName="ListÃ³n"
+                      lineageId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output].Columns[ListÃ³n]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ListÃ³n]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Departamento"
+                      lineageId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Output].Columns[Departamento]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Departamento]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Rosas]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Claveles]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Macetas]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tierra]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Girasoles]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hortensia]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Globos]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tarjetas]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[fOrquÃ­dias]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[fOrquÃ­dias]"
+                      name="fOrquÃ­dias" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[CarmesÃ­]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[CarmesÃ­]"
+                      name="CarmesÃ­" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Lirios]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Aurora]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tulipanes]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ListÃ³n]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ListÃ³n]"
+                      name="ListÃ³n" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Departamento]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Departamento]"
+                      name="Departamento" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task 1\Derived San Miguel.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task 1\Derived San Salvador.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Derived Column Output2]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task 1\Derived Santa Ana.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task 1\Derived San Miguel.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - SanMiguel.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task 1\Derived San Salvador.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - San Salvador.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output2]"
+              endId="Package\Data Flow Task 1\Derived Santa Ana.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - Santa Ana.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task 1\Destination - Fiorella.Inputs[Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{38F6B8F2-3AC0-4D7E-ABB1-9BA5EF938D0D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022 RC0; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8D2C4595-31B7-4A78-AA2F-3484251E0636}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[Fiorella] (&#xA;[id] nvarchar(50),&#xA;[Rosas] tinyint,&#xA;[Claveles] tinyint,&#xA;[Macetas] tinyint,&#xA;[Tierra] tinyint,&#xA;[Girasoles] tinyint,&#xA;[Hortensia] tinyint,&#xA;[Globos] tinyint,&#xA;[Tarjetas] tinyint,&#xA;[fOrquÃ­dias] tinyint,&#xA;[CarmesÃ­] tinyint,&#xA;[Lirios] tinyint,&#xA;[Aurora] tinyint,&#xA;[Tulipanes] tinyint,&#xA;[ListÃ³n] tinyint,&#xA;[Departamento] nvarchar(6)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{CDD30014-1CD8-4886-9084-EAF1ECD94ABF\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{CDD30014-1CD8-4886-9084-EAF1ECD94ABF}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{CDD30014-1CD8-4886-9084-EAF1ECD94ABF}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="20.5,107.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Preparation SQL Task 1"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{CDD30014-1CD8-4886-9084-EAF1ECD94ABF\}]"
+          TopLeft="100.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task 1\Destination - Fiorella"
+          TopLeft="330.5,324.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Data Flow Task 1\Source - SanMiguel"
+          TopLeft="68.5,37.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Data Flow Task 1\Derived San Miguel"
+          TopLeft="103,103" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+          TopLeft="153.5,79.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.5,23.5"
+              Start="0,0"
+              End="34.5,16">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.75"
+                    Point2="0,11.75"
+                    Point3="4,11.75" />
+                  <mssgle:LineSegment
+                    End="30.5,11.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.5,11.75"
+                    Point2="34.5,11.75"
+                    Point3="34.5,15.75" />
+                  <mssgle:LineSegment
+                    End="34.5,16" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Data Flow Task 1\Union All"
+          TopLeft="316,197" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Derived Column Output]"
+          TopLeft="188,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="160.25,52"
+              Start="0,0"
+              End="160.25,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.9191374663073" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.9191374663073"
+                    Point2="0,33.9191374663073"
+                    Point3="4,33.9191374663073" />
+                  <mssgle:LineSegment
+                    End="156.25,33.9191374663073" />
+                  <mssgle:CubicBezierSegment
+                    Point1="156.25,33.9191374663073"
+                    Point2="160.25,33.9191374663073"
+                    Point3="160.25,37.9191374663073" />
+                  <mssgle:LineSegment
+                    End="160.25,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Union All Output 1]"
+          TopLeft="376.5,239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42,85.5"
+              Start="0,0"
+              End="42,78">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.75"
+                    Point2="0,42.75"
+                    Point3="4,42.75" />
+                  <mssgle:LineSegment
+                    End="38,42.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38,42.75"
+                    Point2="42,42.75"
+                    Point3="42,46.75" />
+                  <mssgle:LineSegment
+                    End="42,78" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Data Flow Task 1\Derived San Salvador"
+          TopLeft="290.5,103.5" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Data Flow Task 1\Source - San Salvador"
+          TopLeft="286,26" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Data Flow Task 1\Derived Santa Ana"
+          TopLeft="610,116" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Data Flow Task 1\Source - Santa Ana"
+          TopLeft="607.5,43.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output1]"
+          TopLeft="379,68">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.5"
+              Start="0,0"
+              End="0,28">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Derived Column Output1]"
+          TopLeft="378.5,145.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.5"
+              Start="0,0"
+              End="0,44">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output2]"
+          TopLeft="692.75,85.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.5"
+              Start="0,0"
+              End="0,23">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Derived Column Output2]"
+          TopLeft="693,158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-288.25,39"
+              Start="0,0"
+              End="-288.25,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4393530997305" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4393530997305"
+                    Point2="0,25.4393530997305"
+                    Point3="-4,25.4393530997305" />
+                  <mssgle:LineSegment
+                    End="-284.25,25.4393530997305" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-284.25,25.4393530997305"
+                    Point2="-288.25,25.4393530997305"
+                    Point3="-288.25,29.4393530997305" />
+                  <mssgle:LineSegment
+                    End="-288.25,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Destination - Fiorella">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

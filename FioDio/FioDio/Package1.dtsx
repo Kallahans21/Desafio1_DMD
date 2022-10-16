@@ -1,0 +1,1871 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/24/2022 10:55:46 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-2J6JSSGM"
+  DTS:CreatorName="LAPTOP-2J6JSSGM\Got2l"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{EBF08B05-B63F-498D-B671-B02B4B9EBBAD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Package1"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{7478D0FD-EE0C-429E-8A1F-5B8AA412AA5F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8BEE2129-8BF2-46C1-93B7-3C9DD4E80EAF}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ejercicio1;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceCostaRica]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{39937686-5564-45e0-ac64-71d95e63e4ef}"
+      DTS:ObjectName="SourceCostaRica">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=db_roaming_costarica;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=false;Application Name=SSIS-Package1-{39937686-5564-45e0-ac64-71d95e63e4ef}SourceCostaRica;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceHonduras]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FD57445E-C752-46A0-B369-717C2B0208B1}"
+      DTS:ObjectName="SourceHonduras">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=db_roaming_honduras;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{4DDEB0DA-6A06-4CF6-8527-7786E059B49E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - Query"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - Query"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[fioDio]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - Query.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[idcliente]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idcliente]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[idtipocliente]"
+                      cachedDataType="i4"
+                      cachedName="idtipocliente"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[idtipocliente]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idtipocliente]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[codigo_cliente]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="codigo_cliente"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[codigo_cliente]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[codigo_cliente]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[dui]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="dui"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[dui]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[dui]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[nit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="nit"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[nit]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nit]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[apellidos]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="apellidos"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[apellidos]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[apellidos]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[nombres]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="nombres"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[nombres]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombres]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="sexo"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[sexo]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[sexo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[numero_telefono]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="numero_telefono"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[numero_telefono]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[numero_telefono]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[estado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="estado"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[estado]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[estado]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[nombre_tipo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[nombre_tipo]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombre_tipo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[idfacturacion]"
+                      cachedDataType="i4"
+                      cachedName="idfacturacion"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[idfacturacion]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idfacturacion]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[monto_facturacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[idcliente]"
+                      dataType="i4"
+                      name="idcliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[idtipocliente]"
+                      dataType="i4"
+                      name="idtipocliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[codigo_cliente]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="codigo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[dui]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="dui" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[nit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      name="nit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[apellidos]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="apellidos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[numero_telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="numero_telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[nombre_tipo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="nombre_tipo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[idfacturacion]"
+                      dataType="i4"
+                      name="idfacturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input].ExternalColumns[monto_facturacion]"
+                      dataType="numeric"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - Query.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - Query 1"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - Query 1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  c.*, t.[nombre_tipo],f.idfacturacion, f.monto_facturacion  FROM [db_roaming_honduras].[dbo].[facturacion] as f left join [db_roaming_honduras].[dbo].[cliente] as c on  f.[idcliente]=c.idcliente left join [db_roaming_honduras].[dbo].[tipo_clientes] as t on t.idtipocliente=c.idtipocliente ;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - Query 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceCostaRica]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceCostaRica]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idcliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[idcliente]"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idcliente]"
+                      name="idcliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idtipocliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[idtipocliente]"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idtipocliente]"
+                      name="idtipocliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[codigo_cliente]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[codigo_cliente]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[codigo_cliente]"
+                      name="codigo_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[dui]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[dui]"
+                      length="9"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[dui]"
+                      name="dui"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[nit]"
+                      length="14"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nit]"
+                      name="nit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[apellidos]"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      name="apellidos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nombres]"
+                      name="nombres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[sexo]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[sexo]"
+                      name="sexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[numero_telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[numero_telefono]"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[numero_telefono]"
+                      name="numero_telefono"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[estado]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[estado]"
+                      name="estado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nombre_tipo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[nombre_tipo]"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nombre_tipo]"
+                      name="nombre_tipo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idfacturacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[idfacturacion]"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idfacturacion]"
+                      name="idfacturacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[idcliente]"
+                      dataType="i4"
+                      name="idcliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[idtipocliente]"
+                      dataType="i4"
+                      name="idtipocliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[codigo_cliente]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="codigo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[dui]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="dui" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[nit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      name="nit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[apellidos]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="apellidos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[numero_telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="numero_telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[nombre_tipo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="nombre_tipo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[idfacturacion]"
+                      dataType="i4"
+                      name="idfacturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].ExternalColumns[monto_facturacion]"
+                      dataType="numeric"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[idtipocliente]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[idtipocliente]"
+                      name="idtipocliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[codigo_cliente]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[codigo_cliente]"
+                      name="codigo_cliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      name="dui" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      name="nit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      name="apellidos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      name="nombres" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[sexo]"
+                      name="sexo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[numero_telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[numero_telefono]"
+                      name="numero_telefono" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[nombre_tipo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[nombre_tipo]"
+                      name="nombre_tipo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[idfacturacion]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[idfacturacion]"
+                      name="idfacturacion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source Honduras"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source Honduras"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  c.*, t.[nombre_tipo],f.idfacturacion, f.monto_facturacion  FROM [db_roaming_honduras].[dbo].[facturacion] as f left join [db_roaming_honduras].[dbo].[cliente] as c on  f.[idcliente]=c.idcliente left join [db_roaming_honduras].[dbo].[tipo_clientes] as t on t.idtipocliente=c.idtipocliente ;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source Honduras.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceHonduras]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceHonduras]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idcliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[idcliente]"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idcliente]"
+                      name="idcliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idtipocliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[idtipocliente]"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idtipocliente]"
+                      name="idtipocliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[codigo_cliente]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[codigo_cliente]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[codigo_cliente]"
+                      name="codigo_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[dui]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[dui]"
+                      length="9"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[dui]"
+                      name="dui"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[nit]"
+                      length="14"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nit]"
+                      name="nit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[apellidos]"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[apellidos]"
+                      name="apellidos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nombres]"
+                      name="nombres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[sexo]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[sexo]"
+                      name="sexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[numero_telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[numero_telefono]"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[numero_telefono]"
+                      name="numero_telefono"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[estado]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[estado]"
+                      name="estado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nombre_tipo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[nombre_tipo]"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nombre_tipo]"
+                      name="nombre_tipo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idfacturacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[idfacturacion]"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idfacturacion]"
+                      name="idfacturacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[idcliente]"
+                      dataType="i4"
+                      name="idcliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[idtipocliente]"
+                      dataType="i4"
+                      name="idtipocliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[codigo_cliente]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="codigo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[dui]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="dui" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[nit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      name="nit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[apellidos]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="apellidos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[numero_telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="numero_telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[nombre_tipo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="nombre_tipo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[idfacturacion]"
+                      dataType="i4"
+                      name="idfacturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].ExternalColumns[monto_facturacion]"
+                      dataType="numeric"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[idtipocliente]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[idtipocliente]"
+                      name="idtipocliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[codigo_cliente]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[codigo_cliente]"
+                      name="codigo_cliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[dui]"
+                      name="dui" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[nit]"
+                      name="nit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[apellidos]"
+                      name="apellidos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[nombres]"
+                      name="nombres" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[sexo]"
+                      name="sexo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[numero_telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[numero_telefono]"
+                      name="numero_telefono" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[nombre_tipo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[nombre_tipo]"
+                      name="nombre_tipo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[idfacturacion]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[idfacturacion]"
+                      name="idfacturacion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idcliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idcliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[idtipocliente]"
+                      cachedDataType="i4"
+                      cachedName="idtipocliente"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idtipocliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idtipocliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[codigo_cliente]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="codigo_cliente"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[codigo_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[codigo_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[dui]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="dui"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[dui]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[dui]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[nit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="nit"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[apellidos]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="apellidos"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[apellidos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[apellidos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[nombres]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="nombres"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nombres]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombres]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="sexo"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[numero_telefono]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="numero_telefono"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[numero_telefono]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[numero_telefono]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[estado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="estado"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[estado]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[estado]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[nombre_tipo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[nombre_tipo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombre_tipo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[idfacturacion]"
+                      cachedDataType="i4"
+                      cachedName="idfacturacion"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[idfacturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idfacturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output].Columns[monto_facturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[monto_facturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idcliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idcliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[idtipocliente]"
+                      cachedDataType="i4"
+                      cachedName="idtipocliente"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idtipocliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idtipocliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[codigo_cliente]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="codigo_cliente"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[codigo_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[codigo_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[dui]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="dui"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[dui]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[dui]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[nit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="nit"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[apellidos]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="apellidos"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[apellidos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[apellidos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[nombres]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="nombres"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nombres]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombres]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="sexo"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[numero_telefono]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="numero_telefono"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[numero_telefono]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[numero_telefono]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[estado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="estado"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[estado]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[estado]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[nombre_tipo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[nombre_tipo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombre_tipo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[idfacturacion]"
+                      cachedDataType="i4"
+                      cachedName="idfacturacion"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[idfacturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idfacturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output].Columns[monto_facturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[monto_facturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idtipocliente]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idtipocliente]"
+                      name="idtipocliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[codigo_cliente]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[codigo_cliente]"
+                      name="codigo_cliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[dui]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[dui]"
+                      name="dui" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nit]"
+                      name="nit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[apellidos]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[apellidos]"
+                      name="apellidos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombres]"
+                      name="nombres" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[sexo]"
+                      name="sexo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[numero_telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[numero_telefono]"
+                      name="numero_telefono" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombre_tipo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[nombre_tipo]"
+                      name="nombre_tipo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idfacturacion]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[idfacturacion]"
+                      name="idfacturacion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source Honduras.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - Query 1.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task 1\Destination - Query.Inputs[Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{4D1F783E-8C89-4437-BE8B-9FE84391D51E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022 RC0; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8BEE2129-8BF2-46C1-93B7-3C9DD4E80EAF}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[Query] (&#xA;[idcliente] int,&#xA;[idtipocliente] int,&#xA;[codigo_cliente] varchar(15),&#xA;[dui] varchar(9),&#xA;[nit] varchar(14),&#xA;[apellidos] varchar(250),&#xA;[nombres] varchar(250),&#xA;[sexo] char(1),&#xA;[numero_telefono] varchar(8),&#xA;[estado] char(1),&#xA;[nombre_tipo] varchar(100),&#xA;[idfacturacion] int NOT NULL,&#xA;[monto_facturacion] decimal(10,2) NOT NULL&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{CB62CF40-B4B6-46EA-B116-E7D09790DE22\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{CB62CF40-B4B6-46EA-B116-E7D09790DE22}"
+      DTS:From="Package\Preparation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{CB62CF40-B4B6-46EA-B116-E7D09790DE22}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="234.5,252.5" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Preparation"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{CB62CF40-B4B6-46EA-B116-E7D09790DE22\}]"
+          TopLeft="72,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="242.5,205"
+              Start="0,0"
+              End="242.5,197.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,98.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,98.5"
+                    Point2="0,102.5"
+                    Point3="4,102.5" />
+                  <mssgle:LineSegment
+                    End="238.5,102.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="238.5,102.5"
+                    Point2="242.5,102.5"
+                    Point3="242.5,106.5" />
+                  <mssgle:LineSegment
+                    End="242.5,197.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task 1\Source Honduras"
+          TopLeft="13,5.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task 1\Destination - Query"
+          TopLeft="199.5,285.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task 1\Source - Query 1"
+          TopLeft="333,20.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Data Flow Task 1\Union All"
+          TopLeft="213,169" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+          TopLeft="92.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="181,121.5"
+              Start="0,0"
+              End="181,114">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.75"
+                    Point2="0,60.75"
+                    Point3="4,60.75" />
+                  <mssgle:LineSegment
+                    End="177,60.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="177,60.75"
+                    Point2="181,60.75"
+                    Point3="181,64.75" />
+                  <mssgle:LineSegment
+                    End="181,114" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Union All Output 1]"
+          TopLeft="273.5,211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.5,74.5"
+              Start="0,0"
+              End="11.5,67">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.25"
+                    Point2="0,37.25"
+                    Point3="4,37.25" />
+                  <mssgle:LineSegment
+                    End="7.5,37.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.5,37.25"
+                    Point2="11.5,37.25"
+                    Point3="11.5,41.25" />
+                  <mssgle:LineSegment
+                    End="11.5,67" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output1]"
+          TopLeft="408,62.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-115.666666666667,106.5"
+              Start="0,0"
+              End="-115.666666666667,99">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.0660685154975" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.0660685154975"
+                    Point2="0,63.0660685154975"
+                    Point3="-4,63.0660685154975" />
+                  <mssgle:LineSegment
+                    End="-111.666666666667,63.0660685154975" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-111.666666666667,63.0660685154975"
+                    Point2="-115.666666666667,63.0660685154975"
+                    Point3="-115.666666666667,67.0660685154975" />
+                  <mssgle:LineSegment
+                    End="-115.666666666667,99" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Destination - Query">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Source - Query 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
